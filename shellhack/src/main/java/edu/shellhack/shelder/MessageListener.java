@@ -39,6 +39,11 @@ public class MessageListener extends ListenerAdapter {
             System.out.printf("[%s][%s] %s: %s\n", event.getGuild().getName(),
                         event.getTextChannel().getName(), event.getMember().getEffectiveName(),
                         event.getMessage().getContent());
+            String toBeInterpreted = event.getMessage().getContent();
+            if("ping".equals(toBeInterpreted))
+            {
+            	//reply pong
+            }
         }
     }
 
